@@ -1,7 +1,6 @@
-
-if (!($ = window.jQuery)) { 
+if (!($ = window.jQuery)) { // typeof jQuery=='undefined' works too
 	script = document.createElement( 'script' );
-	script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
+   script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
 	script.onload=turnTheTable;
 	document.body.appendChild(script);
 }
@@ -10,7 +9,7 @@ else {
 }
 
 function turnTheTable() {
-	
+	alert("SILKJAMAS");
 	$("#turntable").children(":first-child").children(":nth-child(2)").children().each(function(i){
 		switch(i){
 			case 0:
@@ -30,8 +29,7 @@ function turnTheTable() {
 				$(this).attr("src", "http://billyrennekamp.com/turntable/new/gauge.png");
 			break;
 		}
-
-	})
+	});
 
 	//song board
 	$("#songboard").css("font-family", "Arial Black").css("color", "black");
@@ -46,15 +44,18 @@ function turnTheTable() {
 		else{
 			$(this).css("background", "url('http://billyrennekamp.com/turntable/new/no.png') 0 0 no-repeat");
 		}
+
 	});
 
 	//left speaker
+	//$("#left_speaker").css("visibility", "hidden");
 	$("#left_speaker").css("background", "url('http://billyrennekamp.com/turntable/new/left_speaker.png') 0 0 no-repeat");
 
 	//right speaker
+    //$("#right_speaker").css("visibility", "hidden");
 	$("#right_speaker").css("background", "url('http://billyrennekamp.com/turntable/new/right_speaker.png') 0 0 no-repeat");
 
-	//needle
-	$("#meterNeedle").children(":first-child").children(":first-child").attr("src", "http://billyrennekamp.com/turntable/new/needle.png")
+    //needle
+	$("#meterNeedle").children(":first-child").children(":first-child").attr("src", "http://billyrennekamp.com/turntable/new/needle.png");
 
 }
